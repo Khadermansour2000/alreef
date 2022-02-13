@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.alreef.controller">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Material">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goToAdd" text="Add new material" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToDeleteMeterials" text="delete material" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToShowMeterials" text="Show all materials" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="purchases">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goToNewOreder" text="new purshase order" />
+                        <MenuItem mnemonicParsing="false" onAction="#goShowOrders" text="Show all orders" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Suppliers">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goToAddSupplier" text="Add new supplier" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToDeleteSuppplier" text="delete supplier" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToShowsuppliers" text="Show all suppliers" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Purshases reports">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goToPursheseReport" text="By supplier" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToReportByMaterial" text="By material" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Items">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goToDeleteItem" text="Delete Item" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToAddItem" text="add new  item" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToUpdateItem" text="Show item" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fx:id="photo" fitHeight="123.0" fitWidth="108.0" onMouseClicked="#goToNewOreder" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@newOrder.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="107.0" fitWidth="93.0" onMouseClicked="#goToPursheseReport" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@report.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
